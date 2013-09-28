@@ -1,9 +1,3 @@
-import socket
-import re
-import time
-from random import randrange
-from ssl import wrap_socket
-
 from django import forms
 from django.core.urlresolvers import reverse
 
