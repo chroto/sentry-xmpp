@@ -33,7 +33,7 @@ class XMPPMessage(Plugin):
     BASE_MAXIMUM_MESSAGE_LENGTH = 400
 
     def is_configured(self, project):
-        return all(self.get_option(k, project) for k in ('server', 'port', 'nick'))
+        return all(self.get_option(k, project) for k in ('jid', 'nick'))
 
     @staticmethod
     def get_group_url(group):

@@ -20,7 +20,7 @@ class SentryNotificationBot(sleekxmpp.ClientXMPP):
                                         self.nick,
                                         password=self.room_password,
                                         wait=True)
-        self.send_message(mto=self.jid.split('@')[1:],
+        self.send_message(mto=self.room,
                           mbody=self.message,
                           mtype='groupchat')
         self.disconnect(wait=True)
