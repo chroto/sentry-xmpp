@@ -73,6 +73,6 @@ class XMPPMessage(Plugin):
         xmpp.register_plugin('xep_0199')  # XMPP Ping
 
         if xmpp.connect():
-            xmpp.process(block=True)
+            xmpp.process(block=False)
         else:
             log.error("XMPP Bot was unable to make a connection", *(jid, password, nick, room))
