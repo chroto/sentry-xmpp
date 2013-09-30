@@ -13,12 +13,11 @@ log = logging.getLogger(__name__)
 
 class XMPPOptionsForm(forms.Form):
     jid = forms.CharField()
+    password = forms.CharField(required=False)
     nick = forms.CharField()
     room = forms.CharField()
 
     room_password = forms.CharField(required=False)
-    password = forms.CharField(required=False)
-    ssl = forms.BooleanField(required=False)
 
 
 class XMPPMessage(Plugin):
